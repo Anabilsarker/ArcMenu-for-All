@@ -1,0 +1,33 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+
+# .NET Core
+*.db
+*.DS_Store
+*.pdb
+*.cache
+*.log
+*.vspscc
+*.vssscc
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Other
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# Publish directory
+publish/

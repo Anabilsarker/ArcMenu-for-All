@@ -1,0 +1,94 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:controls="clr-namespace:ArcMenu_for_All"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+             x:Class="ArcMenu_for_All.ArcMenu">
+	<Grid Background="#36363A">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="20"/> <!--Padding-->
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="80"/>
+			<RowDefinition Height="20"/> <!--Padding-->
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20"/> <!--Padding-->
+			<ColumnDefinition Width="6*"/>
+			<ColumnDefinition Width="4*"/>
+			<ColumnDefinition Width="20"/> <!--Padding-->
+		</Grid.ColumnDefinitions>
+
+		<ScrollViewer x:Name="appScrollView" Grid.Row="1" Grid.Column="1"/>
+		
+		<StackPanel Grid.Row="2" Grid.Column="1" Spacing="15">
+			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D"/>
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="20">
+				<TextBlock Text="All Apps " FontSize="16"/>
+				<Svg Path="Assets/Icons/go-next-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="25" Width="25"/>
+			</StackPanel>
+			<!-- Search Box with Placeholder -->
+			<controls:SearchBar Placeholder="Enter your username"/>
+			<!--<TextBox Watermark="Search..." Background="#48484C" BorderThickness="0" CornerRadius="20" />-->
+		</StackPanel>
+		
+		<StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical" Spacing="10">
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Account Name"/>
+			</StackPanel>
+			
+			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D"/>
+			
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Home"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/folder-documents-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Documents"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/folder-download-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Downloads"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/folder-music-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Music"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/folder-pictures-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Pictures"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/folder-videos-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Videos"/>
+			</StackPanel>
+			
+			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D"/>
+			
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Home"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Home"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Home"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Spacing="5">
+				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+				<TextBlock Text="Home"/>
+			</StackPanel>
+					</StackPanel>
+		<StackPanel Grid.Row="2" Grid.Column="2" Spacing="20" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+			<Svg Path="Assets/Icons/system-log-out-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Svg Path="Assets/Icons/changes-prevent-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Svg Path="Assets/Icons/system-reboot-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Svg Path="Assets/Icons/system-shutdown-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

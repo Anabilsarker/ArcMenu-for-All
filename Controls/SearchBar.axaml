@@ -1,0 +1,73 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+             x:Class="ArcMenu_for_All.SearchBar"
+			 x:Name="Root">
+	
+	<Border Background="#80FFFFFF"
+            BorderBrush="#40FFFFFF"
+            BorderThickness="1"
+            CornerRadius="12"
+            ClipToBounds="True">
+
+		<Border.Effect>
+			<DropShadowEffect Color="White"
+                              OffsetX="0"
+                              OffsetY="0"
+                              BlurRadius="20"
+                              Opacity="0.3"/>
+		</Border.Effect>
+
+		<Grid>
+			<!-- Inner highlight border -->
+			<Border Background="Transparent"
+                    BorderBrush="#30FFFFFF"
+                    BorderThickness="1"
+                    CornerRadius="11"
+                    Margin="1"/>
+
+			<!-- Content grid -->
+			<Grid Margin="16,12">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+
+				<!-- Leading Icon -->
+				<ContentPresenter Grid.Column="0"
+                                  Content="{Binding #Root.LeadingIcon}"
+                                  VerticalAlignment="Center"
+                                  Margin="0,0,8,0"
+                                  IsVisible="{Binding #Root.LeadingIcon, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+
+				<!-- Text Input -->
+				<TextBox Grid.Column="1"
+                         x:Name="InternalTextBox"
+                         Text="{Binding #Root.Text, Mode=TwoWay}"
+                         Watermark="{Binding #Root.Placeholder}"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Foreground="White"
+                         CaretBrush="White"
+                         SelectionBrush="#6000FFFF"
+                         SelectionForegroundBrush="White"
+                         FontSize="14"
+                         FontWeight="Medium"
+                         IsReadOnly="{Binding #Root.IsReadOnly}"
+                         MaxLength="{Binding #Root.MaxLength}"
+                         AcceptsReturn="{Binding #Root.AcceptsReturn}"
+                         TextWrapping="{Binding #Root.TextWrapping}"/>
+
+				<!-- Trailing Icon -->
+				<ContentPresenter Grid.Column="2"
+                                  Content="{Binding #Root.TrailingIcon}"
+                                  VerticalAlignment="Center"
+                                  Margin="8,0,0,0"
+                                  IsVisible="{Binding #Root.TrailingIcon, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+			</Grid>
+		</Grid>
+	</Border>
+</UserControl>
