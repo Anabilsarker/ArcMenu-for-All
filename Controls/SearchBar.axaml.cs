@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using System;
 
 namespace ArcMenu_for_All;
 
@@ -110,6 +111,7 @@ public partial class SearchBar : UserControl
     public SearchBar()
     {
         InitializeComponent();
+        //inputField
     }
 
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
