@@ -5,6 +5,7 @@
 		xmlns:local="clr-namespace:ArcMenu_for_All"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ArcMenu_for_All.MainWindow"
+        ExtendClientAreaToDecorationsHint="True"
         Title="ArcMenu_for_All" Topmost="True" Width="500" Height="600">
 <local:ArcMenu/>
 </Window>
