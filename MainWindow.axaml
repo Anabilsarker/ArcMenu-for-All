@@ -7,5 +7,5 @@
         x:Class="ArcMenu_for_All.MainWindow"
         ExtendClientAreaToDecorationsHint="True"
         Title="ArcMenu_for_All" Topmost="True" Width="500" Height="600">
-<local:ArcMenu/>
+    <local:ArcMenu/>
 </Window>

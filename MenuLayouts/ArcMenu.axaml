@@ -19,7 +19,14 @@
 			<ColumnDefinition Width="20"/> <!--Padding-->
 		</Grid.ColumnDefinitions>
 
-		<ScrollViewer x:Name="appScrollView" Grid.Row="1" Grid.Column="1"/>
+		<ScrollViewer x:Name="appScrollView" Grid.Row="1" Grid.Column="1">
+			<StackPanel Margin="10">
+				<StackPanel Orientation="Horizontal" Margin="0,5">
+					<!-- <Image Source="pack://application:,,,/Resources/org.gnome.Calendar.png" Width="32" Height="32" Margin="0,0,10,0"/> -->
+					<TextBlock Text="Calendar" VerticalAlignment="Center" FontSize="14"/>
+				</StackPanel>
+    		</StackPanel>
+		</ScrollViewer>
 		
 		<StackPanel Grid.Row="2" Grid.Column="1" Spacing="15">
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
