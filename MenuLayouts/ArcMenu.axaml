@@ -9,7 +9,7 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="20"/> <!--Padding-->
 			<RowDefinition Height="*"/>
-			<RowDefinition Height="80"/>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="20"/> <!--Padding-->
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
@@ -39,78 +39,92 @@
 			<!--<TextBox Watermark="Search..." Background="#48484C" BorderThickness="0" CornerRadius="20" />-->
 		</StackPanel>
 		
-		<StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical" Spacing="10">
-			<Button Background="Transparent" Height="30">
+		<StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical">
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Height="40" CornerRadius="5">
 				<StackPanel Orientation="Horizontal" Spacing="5">
 					<Image x:Name="accountImage" Height="30" Width="30"/>
-					<TextBlock x:Name="accountName" Text="Account Name"/>
+					<TextBlock x:Name="accountName" Text="Account Name" VerticalAlignment="Center"/>
 				</StackPanel>
 			</Button>
 			
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
 
-			<Button Background="Transparent" Padding="0">
-				<StackPanel Orientation="Horizontal" Spacing="5">
-					<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
 					<TextBlock Text="Home"/>
 				</StackPanel>
 			</Button>
-			<Button Background="Transparent" Padding="0">
-				<StackPanel Orientation="Horizontal" Spacing="5">
-					<Svg Path="Assets/Icons/folder-documents-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/folder-documents-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
 					<TextBlock Text="Documents"/>
 				</StackPanel>
 			</Button>
-			<Button Background="Transparent" Padding="0">
-				<StackPanel Orientation="Horizontal" Spacing="5">
-					<Svg Path="Assets/Icons/folder-download-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/folder-download-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
 					<TextBlock Text="Downloads"/>
 				</StackPanel>
 			</Button>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/folder-music-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Music"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/folder-pictures-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Pictures"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/folder-videos-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Videos"/>
-			</StackPanel>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/folder-music-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Music"/>
+				</StackPanel>
+			</Button>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/folder-pictures-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Pictures"/>
+				</StackPanel>
+			</Button>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/folder-videos-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Videos"/>
+				</StackPanel>
+			</Button>
 			
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
-			
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Software"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Settings"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Tweaks"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Spacing="5">
-				<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="15" Width="15"/>
-				<TextBlock Text="Activities Overview"/>
-			</StackPanel>
+
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Software"/>
+				</StackPanel>
+			</Button>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Settings"/>
+				</StackPanel>
+			</Button>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/icon-arcmenu-logo-alt-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="ArcMenu Settings"/>
+				</StackPanel>
+			</Button>
+			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+				<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="5">
+					<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15" Margin="10,0,0,0"/>
+					<TextBlock Text="Activities Overview"/>
+				</StackPanel>
+			</Button>
 		</StackPanel>
 
 		<StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-			<Button Background="Transparent" Width="40" Height="40" Click="Logout_Click">
+			<Button Background="Transparent" Width="40" Height="30" Click="Logout_Click">
 				<Svg Path="Assets/Icons/system-log-out-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="15" Height="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="40" Click="Lock_Click">
+			<Button Background="Transparent" Width="40" Height="30" Click="Lock_Click">
 				<Svg Path="Assets/Icons/changes-prevent-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="40" PointerPressed="Reboot_PointerPressed">
+			<Button Background="Transparent" Width="40" Height="30" PointerPressed="Reboot_PointerPressed">
 				<Svg Path="Assets/Icons/system-reboot-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="40" Click="Shutdown_Click">
+			<Button Background="Transparent" Width="40" Height="30" Click="Shutdown_Click">
 				<Svg Path="Assets/Icons/system-shutdown-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
 		</StackPanel>
