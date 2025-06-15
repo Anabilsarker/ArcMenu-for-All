@@ -3,34 +3,45 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:controls="clr-namespace:ArcMenu_for_All"
+			 xmlns:appList="clr-namespace:ArcMenu_for_All.Platform.Linux"
              mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
              x:Class="ArcMenu_for_All.ArcMenu">
 	<Grid Background="#36363A">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="20"/> <!--Padding-->
+			<RowDefinition Height="20"/>
+			<!--Padding-->
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="20"/> <!--Padding-->
+			<RowDefinition Height="20"/>
+			<!--Padding-->
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20"/> <!--Padding-->
+			<ColumnDefinition Width="20"/>
+			<!--Padding-->
 			<ColumnDefinition Width="6*"/>
 			<ColumnDefinition Width="4*"/>
-			<ColumnDefinition Width="20"/> <!--Padding-->
+			<ColumnDefinition Width="20"/>
+			<!--Padding-->
 		</Grid.ColumnDefinitions>
 
-		<ScrollViewer x:Name="appScrollView" Grid.Row="1" Grid.Column="1">
-			<StackPanel Margin="10">
-				<StackPanel Orientation="Horizontal" Margin="0,5">
-					<!-- <Image Source="pack://application:,,,/Resources/org.gnome.Calendar.png" Width="32" Height="32" Margin="0,0,10,0"/> -->
-					<TextBlock Text="Calendar" VerticalAlignment="Center" FontSize="14"/>
-				</StackPanel>
-    		</StackPanel>
+		<ScrollViewer Grid.Row="1" Grid.Column="1">
+			<ItemsControl x:Name="AppList" Margin="10">
+				<ItemsControl.ItemTemplate>
+					<DataTemplate DataType="appList:InstalledApp">
+						<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
+							<StackPanel Orientation="Horizontal" Margin="0" Spacing="10">
+								<Image Source="{Binding Icon}" Width="30" Height="30"/>
+								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" FontSize="14"/>
+							</StackPanel>
+						</Button>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
 		</ScrollViewer>
-		
+
 		<StackPanel Grid.Row="2" Grid.Column="1" Spacing="15">
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
-			<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="20">
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
 				<TextBlock Text="All Apps " FontSize="16"/>
 				<Svg Path="Assets/Icons/go-next-symbolic.svg" Css="path { fill: #FFFFFF; }" HorizontalAlignment="Left" Height="25" Width="25"/>
 			</StackPanel>
@@ -38,7 +49,7 @@
 			<controls:SearchBar Placeholder="Enter your username"/>
 			<!--<TextBox Watermark="Search..." Background="#48484C" BorderThickness="0" CornerRadius="20" />-->
 		</StackPanel>
-		
+
 		<StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical">
 			<Button Background="Transparent" HorizontalAlignment="Stretch" Height="40" CornerRadius="5">
 				<StackPanel Orientation="Horizontal" Spacing="5">
@@ -46,7 +57,7 @@
 					<TextBlock x:Name="accountName" Text="Account Name" VerticalAlignment="Center"/>
 				</StackPanel>
 			</Button>
-			
+
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
 
 			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
@@ -85,7 +96,7 @@
 					<TextBlock Text="Videos"/>
 				</StackPanel>
 			</Button>
-			
+
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
 
 			<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">

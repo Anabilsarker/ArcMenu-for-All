@@ -20,7 +20,7 @@ public partial class ArcMenu : UserControl
             accountImage.Source = new Bitmap(accountPicturePath);
         }
 
-        appScrollView.Content = AppDiscovery.ListAllApps();
+        AppList.ItemsSource = AppDiscovery.ListAllApps();
     }
 
     private void Shutdown_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

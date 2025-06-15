@@ -37,7 +37,7 @@ namespace ArcMenu_for_All.Platform.Linux
 
                 if (Directory.Exists(expandedPath))
                 {
-                    var desktopFiles = Directory.GetFiles(expandedPath, "*.desktop", SearchOption.TopDirectoryOnly);
+                    string[] desktopFiles = Directory.GetFiles(expandedPath, "*.desktop", SearchOption.TopDirectoryOnly);
 
                     foreach (string filePath in desktopFiles)
                     {
@@ -74,11 +74,11 @@ namespace ArcMenu_for_All.Platform.Linux
                         continue;
                     }
 
-                    if (trimmedLine.StartsWith("[") && trimmedLine.EndsWith("]"))
-                    {
-                        inDesktopEntry = false;
-                        continue;
-                    }
+                    // if (trimmedLine.StartsWith("[") && trimmedLine.EndsWith("]"))
+                    // {
+                    //     inDesktopEntry = false;
+                    //     continue;
+                    // }
 
                     if (!inDesktopEntry || !trimmedLine.Contains('='))
                         continue;
