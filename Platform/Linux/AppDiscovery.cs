@@ -98,7 +98,7 @@ namespace ArcMenu_for_All.Platform.Linux
                             app.Exec = value;
                             break;
                         case "Icon":
-                            app.Icon = value;
+                            app.Icon = IconResolver.ResolveIconPath(value);
                             break;
                         case "Comment":
                             app.Comment = value;
