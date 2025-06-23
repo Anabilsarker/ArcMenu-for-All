@@ -8,20 +8,16 @@
              x:Class="ArcMenu_for_All.ArcMenu">
 	<Grid Background="#36363A">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="20"/>
-			<!--Padding-->
+			<RowDefinition Height="20"/> <!--Padding-->
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="20"/>
-			<!--Padding-->
+			<RowDefinition Height="20"/> <!--Padding-->
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20"/>
-			<!--Padding-->
+			<ColumnDefinition Width="20"/> <!--Padding-->
 			<ColumnDefinition Width="6*"/>
 			<ColumnDefinition Width="4*"/>
-			<ColumnDefinition Width="20"/>
-			<!--Padding-->
+			<ColumnDefinition Width="20"/> <!--Padding-->
 		</Grid.ColumnDefinitions>
 
 		<ScrollViewer Grid.Row="1" Grid.Column="1">
@@ -126,16 +122,16 @@
 		</StackPanel>
 
 		<StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-			<Button Background="Transparent" Width="40" Height="30" Click="Logout_Click">
+			<Button ToolTip.Tip="Log Out" Background="Transparent" Width="35" Height="35" Click="Logout_Click">
 				<Svg Path="Assets/Icons/system-log-out-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="15" Height="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="30" Click="Lock_Click">
+			<Button ToolTip.Tip="Lock" Background="Transparent" Width="35" Height="35" Click="Lock_Click">
 				<Svg Path="Assets/Icons/changes-prevent-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="30" PointerPressed="Reboot_PointerPressed">
+			<Button ToolTip.Tip="Restart" Background="Transparent" Width="35" Height="35" PointerPressed="Reboot_PointerPressed">
 				<Svg Path="Assets/Icons/system-reboot-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
-			<Button Background="Transparent" Width="40" Height="30" Click="Shutdown_Click">
+			<Button ToolTip.Tip="Shutdown" Background="Transparent" Width="35" Height="35" Click="Shutdown_Click">
 				<Svg Path="Assets/Icons/system-shutdown-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
 			</Button>
 		</StackPanel>
