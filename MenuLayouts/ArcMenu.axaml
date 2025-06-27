@@ -26,9 +26,34 @@
 					<DataTemplate DataType="appList:InstalledApp">
 						<Button Background="Transparent" HorizontalAlignment="Stretch" Padding="0" Height="30" CornerRadius="10">
 							<StackPanel Orientation="Horizontal" Margin="0" Spacing="10">
-								<Image Source="{Binding Icon}" Width="30" Height="30"/>
+								<Svg Path="{Binding Icon}" Width="30" Height="30"/>
 								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" FontSize="14"/>
 							</StackPanel>
+							<Button.ContextMenu>
+								<ContextMenu>
+									<MenuItem Header="Run as administrator">
+										<MenuItem.Icon>
+											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #000000; }" Width="16" Height="16"/>
+										</MenuItem.Icon>
+									</MenuItem>
+									<MenuItem Header="Open file location">
+										<MenuItem.Icon>
+											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #000000; }" Width="16" Height="16"/>
+										</MenuItem.Icon>
+									</MenuItem>
+									<MenuItem Header="Add to favorites">
+										<MenuItem.Icon>
+											<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #000000; }" Width="16" Height="16"/>
+										</MenuItem.Icon>
+									</MenuItem>
+									<Separator/>
+									<MenuItem Header="Uninstall">
+										<MenuItem.Icon>
+											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #000000; }" Width="16" Height="16"/>
+										</MenuItem.Icon>
+									</MenuItem>
+								</ContextMenu>
+							</Button.ContextMenu>
 						</Button>
 					</DataTemplate>
 				</ItemsControl.ItemTemplate>

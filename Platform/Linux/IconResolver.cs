@@ -39,7 +39,6 @@ namespace ArcMenu_for_All.Platform.Linux
                         string iconPath = Path.Combine(expandedDir, "hicolor", size, "apps", iconName + ext);
                         if (File.Exists(iconPath))
                         {
-                            Console.WriteLine($"Found icon: {iconPath}");
                             return iconPath;
                         }
                     }
