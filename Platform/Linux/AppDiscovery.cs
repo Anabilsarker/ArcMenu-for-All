@@ -50,10 +50,7 @@ namespace ArcMenu_for_All.Platform.Linux
                 }
             }
 
-            // Remove duplicates, prefer user applications over system ones
-            return apps.GroupBy(app => app.Name)
-                      .Select(group => group.OrderBy(app => GetApplicationPriority(app.DesktopFilePath)).First())
-                      .ToList();
+            return apps.OrderBy(x => x.Name).ToList();
         }
 
         private static InstalledApp ParseDesktopFile(string filePath)
