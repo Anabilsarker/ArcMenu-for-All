@@ -113,7 +113,7 @@ namespace ArcMenu_for_All.Platform.Linux
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error parsing {filePath}: {ex.Message}");
+                Console.Error.WriteLine($"Error parsing {filePath}: {ex.Message}");
                 return null;
             }
         }
