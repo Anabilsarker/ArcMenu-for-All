@@ -10,6 +10,7 @@ namespace ArcMenu_for_All.Platform.Linux
         public string Name { get; set; }
         public string Exec { get; set; }
         public string Icon { get; set; }
+        public string Actions { get; set; }
         public string Comment { get; set; }
         public string Categories { get; set; }
         public bool NoDisplay { get; set; }
@@ -97,6 +98,9 @@ namespace ArcMenu_for_All.Platform.Linux
                             break;
                         case "Icon":
                             app.Icon = IconResolver.ResolveIconPath(value);
+                            break;
+                        case "Actions":
+                            app.Actions = value;
                             break;
                         case "Comment":
                             app.Comment = value;

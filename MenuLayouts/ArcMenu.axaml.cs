@@ -1,9 +1,11 @@
+using System;
 using ArcMenu_for_All.Platform.Linux;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
+using Avalonia.Interactivity;
 
 namespace ArcMenu_for_All;
 
@@ -57,6 +59,15 @@ public partial class ArcMenu : UserControl
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
             Session.Logout();
+        }
+    }
+
+    private void RunApp_Click(object? sender, RoutedEventArgs e)
+    {
+        if ((sender as Button)?.DataContext is InstalledApp app)
+        {
+            Console.WriteLine($"Button clicked: {app.Exec}");
+            AppLauncher.LaunchApp(app);
         }
     }
 }
