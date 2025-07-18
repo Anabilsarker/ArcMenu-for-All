@@ -30,24 +30,24 @@
 								<TextBlock Text="{Binding Name}" VerticalAlignment="Center" FontSize="14"/>
 							</StackPanel>
 							<Button.ContextMenu>
-								<ContextMenu>
-									<MenuItem Header="Run as administrator">
+								<ContextMenu Background="#363636">
+									<MenuItem Header="Run as administrator" Foreground="White">
 										<MenuItem.Icon>
 											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="16" Height="16"/>
 										</MenuItem.Icon>
 									</MenuItem>
-									<MenuItem Header="Open file location">
+									<MenuItem Header="Open file location" Foreground="White">
 										<MenuItem.Icon>
 											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="16" Height="16"/>
 										</MenuItem.Icon>
 									</MenuItem>
-									<MenuItem Header="Add to favorites">
+									<MenuItem Header="Add to favorites" Foreground="White">
 										<MenuItem.Icon>
 											<Svg Path="Assets/Icons/user-home-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="16" Height="16"/>
 										</MenuItem.Icon>
 									</MenuItem>
 									<Separator/>
-									<MenuItem Header="Uninstall">
+									<MenuItem Header="Uninstall" Foreground="White">
 										<MenuItem.Icon>
 											<Svg Path="Assets/Icons/applications-system-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="16" Height="16"/>
 										</MenuItem.Icon>

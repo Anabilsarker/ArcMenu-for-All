@@ -13,6 +13,7 @@ namespace ArcMenu_for_All.Platform.Linux
         public string Comment { get; set; }
         public string Categories { get; set; }
         public bool NoDisplay { get; set; }
+        public string NotShowIn { get; set; }
         public string DesktopFilePath { get; set; }
     }
 
@@ -71,11 +72,11 @@ namespace ArcMenu_for_All.Platform.Linux
                         continue;
                     }
 
-                    // if (trimmedLine.StartsWith("[") && trimmedLine.EndsWith("]"))
-                    // {
-                    //     inDesktopEntry = false;
-                    //     continue;
-                    // }
+                    if (trimmedLine.StartsWith("[") && trimmedLine.EndsWith("]"))
+                    {
+                        inDesktopEntry = false;
+                        continue;
+                    }
 
                     if (!inDesktopEntry || !trimmedLine.Contains('='))
                         continue;
@@ -106,6 +107,9 @@ namespace ArcMenu_for_All.Platform.Linux
                         case "NoDisplay":
                             app.NoDisplay = value.ToLower() == "true";
                             break;
+                        case "NotShowIn":
+                            app.NotShowIn = value;
+                            break;
                     }
                 }
 
@@ -123,6 +127,7 @@ namespace ArcMenu_for_All.Platform.Linux
             // Filter out apps that shouldn't be displayed
             if (string.IsNullOrEmpty(app.Name) ||
                 string.IsNullOrEmpty(app.Exec) ||
+                !string.IsNullOrEmpty(app.NotShowIn) ||
                 app.NoDisplay)
             {
                 return false;
