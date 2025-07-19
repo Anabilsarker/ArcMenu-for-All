@@ -13,14 +13,20 @@ namespace ArcMenu_for_All.Platform.Linux
                     return;
 
                 // Parse the Exec field (remove field codes like %f, %u, etc.)
-                string command = ParseExecCommand(app.Exec);
-
+                // string command = ParseExecCommand(app.Exec);
+                //
+                // var processInfo = new ProcessStartInfo
+                // {
+                //     FileName = "/bin/bash",
+                //     Arguments = $"-c \"{command}\"",
+                //     UseShellExecute = false,
+                //     CreateNoWindow = true
+                // };
                 var processInfo = new ProcessStartInfo
                 {
-                    FileName = "/bin/bash",
-                    Arguments = $"-c \"{command}\"",
+                    FileName = app.Exec.Split(' ')[0],
                     UseShellExecute = false,
-                    CreateNoWindow = true
+                    CreateNoWindow = false
                 };
 
                 Process.Start(processInfo);
