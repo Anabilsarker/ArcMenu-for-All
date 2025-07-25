@@ -15,7 +15,7 @@ public partial class ArcMenu : UserControl
     {
         InitializeComponent();
 
-        accountName.Text = System.Environment.UserName;
+        accountName.Text = Environment.UserName;
         string accountPicturePath = Session.GetAccountPicturePath();
         if (!string.IsNullOrEmpty(accountPicturePath) && File.Exists(accountPicturePath))
         {
@@ -69,5 +69,13 @@ public partial class ArcMenu : UserControl
             Console.WriteLine($"Button clicked: {app.Exec}");
             AppLauncher.LaunchApp(app);
         }
+    }
+
+    private void WiFi_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+    }
+
+    private void Bluetooth_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
     }
 }

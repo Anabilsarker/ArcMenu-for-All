@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:controls="clr-namespace:ArcMenu_for_All"
 			 xmlns:appList="clr-namespace:ArcMenu_for_All.Platform.Linux"
-             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="600"
              x:Class="ArcMenu_for_All.ArcMenu">
 	<Grid Background="#36363A">
 		<Grid.RowDefinitions>
@@ -62,7 +62,7 @@
 			</ItemsControl>
 		</ScrollViewer>
 
-		<StackPanel Grid.Row="2" Grid.Column="1" Spacing="15">
+		<StackPanel Grid.Row="2" Grid.Column="1" Spacing="15" VerticalAlignment="Bottom">
 			<Separator Height="1" HorizontalAlignment="Stretch" Foreground="#4A4A4D" Opacity="0.5"/>
 			<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
 				<TextBlock Text="All Apps " FontSize="16"/>
@@ -148,19 +148,34 @@
 			</Button>
 		</StackPanel>
 
-		<StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-			<Button ToolTip.Tip="Log Out" Background="Transparent" Width="35" Height="35" Click="Logout_Click">
-				<Svg Path="Assets/Icons/system-log-out-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="15" Height="15"/>
-			</Button>
-			<Button ToolTip.Tip="Lock" Background="Transparent" Width="35" Height="35" Click="Lock_Click">
-				<Svg Path="Assets/Icons/changes-prevent-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
-			</Button>
-			<Button ToolTip.Tip="Restart" Background="Transparent" Width="35" Height="35" PointerPressed="Reboot_PointerPressed">
-				<Svg Path="Assets/Icons/system-reboot-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
-			</Button>
-			<Button ToolTip.Tip="Shutdown" Background="Transparent" Width="35" Height="35" Click="Shutdown_Click">
-				<Svg Path="Assets/Icons/system-shutdown-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
-			</Button>
+		<StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalAlignment="Bottom">
+			<StackPanel Orientation="Horizontal" Spacing="5" HorizontalAlignment="Center">
+				<Button ToolTip.Tip="Wi-Fi" Background="Transparent" BorderBrush="White" BorderThickness="2" CornerRadius="20" Width="35" Height="35" Click="WiFi_Click">
+					<Svg Path="Assets/Icons/Wi-Fi/wi-fi.svg" Css="path { fill: #FFFFFF; }" Width="15" Height="15"/>
+				</Button>
+				<Button ToolTip.Tip="Bluetooth" Background="Transparent" BorderBrush="White" BorderThickness="2" CornerRadius="20" Width="35" Height="35" Click="Bluetooth_Click">
+					<Svg Path="Assets/Icons/bluetooth.svg" Width="18" Height="18"/>
+				</Button>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+				<Slider Width="130" Background="White"  /> 
+				<Slider />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button ToolTip.Tip="Log Out" Background="Transparent" Width="35" Height="35" Click="Logout_Click">
+					<Svg Path="Assets/Icons/system-log-out-symbolic.svg" Css="path { fill: #FFFFFF; }" Width="15" Height="15"/>
+				</Button>
+				<Button ToolTip.Tip="Lock" Background="Transparent" Width="35" Height="35" Click="Lock_Click">
+					<Svg Path="Assets/Icons/changes-prevent-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
+				</Button>
+				<Button ToolTip.Tip="Restart" Background="Transparent" Width="35" Height="35" PointerPressed="Reboot_PointerPressed">
+					<Svg Path="Assets/Icons/system-reboot-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
+				</Button>
+				<Button ToolTip.Tip="Shutdown" Background="Transparent" Width="35" Height="35" Click="Shutdown_Click">
+					<Svg Path="Assets/Icons/system-shutdown-symbolic.svg" Css="path { fill: #FFFFFF; }" Height="15" Width="15"/>
+				</Button>
+			</StackPanel>
 		</StackPanel>
+		
 	</Grid>
 </UserControl>

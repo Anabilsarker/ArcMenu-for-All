@@ -105,8 +105,10 @@ public class Network
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = command.Split(' ')[0],
-                    Arguments = command.Split(' ', 2)[1] ,
+                    //FileName = command.Split(' ')[0],
+                    //Arguments = command.Split(' ', 2)[1] ,
+                    FileName = "/bin/bash",
+                    Arguments = $"-c \"{command}\"",
                     RedirectStandardOutput = false,
                     RedirectStandardError = false,
                     UseShellExecute = false,
